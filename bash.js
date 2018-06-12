@@ -1,12 +1,18 @@
-process.stdout.write('prompt > ');
+// process.stdout.write('prompt > ');
 
-process.stdin.on('data', data => {
-	const cmd = data.toString().trim();
+// process.stdin.on('data', data => {
+// 	const cmd = data.toString().trim();
 
-	if (cmd === 'pwd') {
-		process.stdout.write(__dirname + '\n');
-	}
+// 	if (cmd === 'pwd') {
+// 		process.stdout.write(__dirname + '\n');
+// 	}
 
-	process.stdout.write('You typed: ' + cmd);
-	process.stdout.write('\nprompt > ');
-});
+// 	process.stdout.write('You typed: ' + cmd);
+// 	process.stdout.write('\nprompt > ');
+// });
+
+const pwdCall = require('./pwd.js')
+pwdCall()
+
+const catCall = require('./cat.js')
+catCall()
